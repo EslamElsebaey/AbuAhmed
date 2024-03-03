@@ -1,0 +1,365 @@
+
+.banners-group{
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+
+
+.banners-group{
+    .swiper-wrapper{
+        column-gap: 16px;
+        flex-wrap: wrap;
+        .swiper-slide{
+            width: calc(100% / 4 - 12px);
+            .banners-g-child{
+                a{
+                    display: block;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// *****************************************************************************************************
+
+
+
+
+.banner-shine{
+    img{
+        transition: all ease-in-out .3s;
+    }
+    position: relative;
+    display: block;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -81%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+        transform: skewX(-25deg);
+        cursor: pointer;
+    }
+    &:hover{
+        &::before{
+            animation: shineIt 0.7s ease forwards;
+        }
+        img{
+            transform: scale(1.1);
+        }
+      }
+      
+}
+
+
+.banners{
+    margin: 20px 0;
+}
+.banners-parent{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    column-gap: 22px;
+}
+
+.banner-item {
+   
+    img{
+        width: 100%;
+        transition:  all linear .2s;
+    }
+}
+
+
+.single-banner{
+    margin: 20px 0;
+}
+
+@include max-768 {
+    .banners-parent{
+        grid-template-columns: auto;
+        gap: 20px;
+    }   
+    .banner-item img{
+       max-width: 100%;
+       transition: all linear .3s;
+       object-fit: cover;
+       min-height: 140px;
+    }
+}
+
+@include min-768 {
+    .banners-parent{
+        grid-template-columns: 1fr 1fr;
+    }   
+  
+}
+
+
+
+@keyframes shineIt {
+    100% {
+      left: 125%;
+    }
+}
+
+
+
+
+
+// *****************************************************************************************************
+
+@include max-1200{
+    .banners-group .swiper-wrapper{
+        justify-content: center;
+        row-gap: 16px;
+        .swiper-slide{
+            width: calc(100% / 3 - 12px);
+        }
+    }
+}
+
+
+@include max-992 {
+    .banners-group .swiper-wrapper{
+        .swiper-slide{
+            width: calc(100% / 2 - 12px);
+        }
+    }
+}
+
+
+@include max-768 {
+    .banners-group{
+        margin-bottom: 0;
+        .mySwiper-parent{
+            padding-bottom: 60px;
+        }
+    }
+ 
+    .banners-group .swiper-wrapper{
+        flex-wrap: nowrap;
+        justify-content: unset;
+        column-gap: unset;
+        
+    }
+}
+
+
+
+@media screen and (max-width : 500px) {
+    .banners-g-child a img{
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *****************************************************************************************************
+
+// HTML
+
+// <section class="banners-group">
+//   <div class="container">
+//     <div class="banners-g-parent">
+//       <div class="banners-g-child">
+//         <a href="#" class="banner-shine">
+//           <img src="images/banners/01.jpg" alt="">
+//         </a>
+//       </div>
+//       <div class="banners-g-child">
+//         <a href="#" class="banner-shine">
+//           <img src="images/banners/02.jpg" alt="">
+//         </a>
+//       </div>
+//       <div class="banners-g-child">
+//         <a href="#" class="banner-shine">
+//           <img src="images/banners/03.jpg" alt="">
+//         </a>
+//       </div>
+//       <div class="banners-g-child">
+//         <a href="#" class="banner-shine">
+//           <img src="images/banners/04.jpg" alt="">
+//         </a>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+
+
+
+
+
+// CSS
+
+// .banners-group{
+//     margin-bottom: 20px;
+//     margin-top: 25px;
+// }
+// .banners-g-parent{
+  
+//     display: grid;
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 12.5px;
+//     .banners-g-child{
+//         width: calc(100% / 4 - 12.5px);
+//         a{
+//             display: block;
+//             width: 100%;
+//             img{
+//                 width: 100%;
+//                 object-fit: cover;
+
+//             }
+//         }
+//     }
+// }
+
+
+
+
+// .banner-shine{
+//     img{
+//         transition: all ease-in-out .3s;
+//     }
+//     position: relative;
+//     display: block;
+//     overflow: hidden;
+//     &::before {
+//         position: absolute;
+//         top: 0;
+//         left: -81%;
+//         z-index: 2;
+//         display: block;
+//         content: '';
+//         width: 50%;
+//         height: 100%;
+//         background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+//         transform: skewX(-25deg);
+//         cursor: pointer;
+//     }
+//     &:hover{
+//         &::before{
+//             animation: shineIt 0.7s ease forwards;
+//         }
+//         img{
+//             transform: scale(1.1);
+//         }
+//       }
+      
+// }
+
+
+
+
+// .banners{
+//     margin: 20px 0;
+// }
+// .banners-parent{
+//     display: grid;
+//     grid-template-columns: repeat(2 , 1fr);
+//     column-gap: 22px;
+// }
+
+// .banner-item {
+//     // overflow: hidden;
+//     // transition: all linear .3s;
+//     img{
+//         width: 100%;
+//         transition:  all linear .2s;
+//     }
+// }
+
+
+// .single-banner{
+//     margin: 20px 0;
+// }
+
+// @include max-768 {
+//     .banners-parent{
+//         grid-template-columns: auto;
+//         gap: 20px;
+//     }   
+//     .banner-item img{
+//        max-width: 100%;
+//        transition: all linear .3s;
+//        object-fit: cover;
+//        min-height: 140px;
+//     }
+// }
+
+// @include min-768 {
+//     .banners-parent{
+//         grid-template-columns: 1fr 1fr;
+//     }   
+  
+// }
+
+
+
+
+
+
+
+// @keyframes shineIt {
+//     100% {
+//       left: 125%;
+//     }
+// }
+
+
+// @include max-1200{
+//     .banners-g-parent{
+//         justify-content: center;
+//         .banners-g-child{
+//             width: calc(100% / 3 - 12px);
+//         }
+//     }
+// }
+// @include max-992 {
+//     .banners-g-parent{
+//         .banners-g-child{
+//             width: calc(100% / 2 - 12px);
+//         }
+//     }
+// }
+
+
+// @media screen and (max-width : 500px) {
+//     .banners-g-parent{
+//         gap: 0;
+//         row-gap: 12px;
+//         .banners-g-child{
+//             width: 100% 
+//         }
+//     }   
+//     .banners-g-parent .banners-g-child a img{
+//         height: 300px;
+//     }
+// }
+

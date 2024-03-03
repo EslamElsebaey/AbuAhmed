@@ -1,0 +1,75 @@
+
+.mainBanner{
+    margin-top: 10px;
+    .swiper-pagination{
+      
+        bottom: 17px;
+      }
+    .mainBanner-parent{
+    position: relative;
+    // height: 100%;
+   }
+//    .swiper{
+//     height: 100%;
+//    }
+
+
+}
+
+
+
+
+.mainBanner-link{
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+// .mainBanner{
+//     .swiper-pagination-bullet{
+//         opacity: 0.400;
+//         width: 10px;
+//         height: 3px;
+//         border-radius: 1px;
+//         background-color: #000000;
+//     }
+//     .swiper-pagination-bullet-active{
+//         opacity: 1;
+//         background-color: #831518; ;
+//     }
+// }
+
+
+.mainBanner-link{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+@include max-992 {
+    .mainBanner{
+        .swiper-pagination{
+            bottom: 12px;
+        }
+    }
+   
+}
+
+
+@include max-768 {
+    .mainBanner-link img{
+        height: 100%;
+    }
+}
+
+
+@media screen and (max-width:450px) {
+    .mainBanner .mainslider-item{
+        height: 157px;
+    }
+}

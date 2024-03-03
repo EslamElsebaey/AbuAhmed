@@ -1,0 +1,39 @@
+html[dir="ltr"]{
+    .categories-li .categories-btn{
+        border-left: none;
+        border-right: 1px solid #f6ede8;
+    }
+    .cart-holder .cart-icon{
+        order: 2;
+    }
+    .cart-holder .cart-text{
+        order: 1;
+    }
+    @include min-768 {
+        .footer-item .quick-drop li a:hover{
+            transform: translateX(10px);
+        }
+    }
+
+    @include max-1200 {
+        .feature-title{
+            line-height: 20px;
+        }
+    }
+    @include max-1200 {
+        .feature-title{
+            line-height: 24px;
+        }
+    }
+
+    @include max-768 {
+        .feature-title{
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+        .feature-subtitle{
+            line-height: 1.4;
+        }
+    }
+    
+}
