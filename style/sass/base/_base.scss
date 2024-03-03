@@ -1,11 +1,3 @@
-//  variables
-$main-color : #f6ede8;
-$dark-color: #1a1a1a;
-
-
-
-
-
 body {
   font-weight: 400;
   font-style: normal;
@@ -107,11 +99,10 @@ a , button {
 ::-webkit-scrollbar-thumb {
   background:  #d6cdc8;
   border-radius: 15px;
-  // width: 7px;
 }
 
 ::-webkit-scrollbar-track{
-  background-color: $main-color;
+  background-color: #f6ede8;
 }
 
 
@@ -243,27 +234,6 @@ a , button {
 }
 
 
-
-
-
-
-
-
-  
-
-  .fa-sharp.fa-solid.fa-screwdriver-wrench{
-    font-family: "Font Awesome 6 Pro";
-  }
-  
-  @keyframes pulse-maintainance {
-    0% {
-      box-shadow: 0 0 0 0 $main-color;
-    }
-    80% {
-      box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-    }
-  }
-  
 
 
 

@@ -241,18 +241,6 @@ a:focus, button:focus {
   z-index: 40;
 }
 
-.fa-sharp.fa-solid.fa-screwdriver-wrench {
-  font-family: "Font Awesome 6 Pro";
-}
-
-@keyframes pulse-maintainance {
-  0% {
-    box-shadow: 0 0 0 0 #f6ede8;
-  }
-  80% {
-    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-  }
-}
 @media screen and (min-width: 1300px) {
   .container {
     width: 1300px;
@@ -280,6 +268,32 @@ a:focus, button:focus {
     font-size: 30px;
   }
 }
+.account-div {
+  position: relative;
+}
+.account-div:hover .account-text, .account-div:hover .account-text .fa-angle-down {
+  color: #831518;
+}
+.account-div .account-text {
+  font-size: 14px;
+  color: #5e5e5e;
+  transition: color linear 0.2s;
+  font-weight: 500;
+  cursor: pointer;
+}
+.account-div .account-text .fa-angle-down {
+  font-size: 12px;
+  margin-inline-start: 3px;
+  margin-inline-end: 0;
+  color: #5e5e5e;
+  transition: color linear 0.2s;
+}
+.account-div:hover .account-details {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) translateX(-50%);
+}
+
 header {
   transition: all linear 0.3s;
   position: absolute;

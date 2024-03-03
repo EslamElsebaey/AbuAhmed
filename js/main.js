@@ -354,7 +354,7 @@ $(window).on("scroll", function () {
 
 // **************************************************************************************************
 
-// nested menus
+// nested menus in siebar
 
 if($(window).width() <= 992) {  
   $(".categories-btn").click(function (e) {

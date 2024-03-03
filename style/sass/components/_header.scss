@@ -1,5 +1,43 @@
 
 
+// style of account div when user is logged in 
+
+.account-div{
+    &:hover{
+        .account-text ,  .account-text .fa-angle-down {
+            color: #831518;
+        } 
+    }
+    .account-text{
+        font-size: 14px;
+        color: #5e5e5e;
+        transition: color linear 0.2s;
+        font-weight: 500;
+        cursor: pointer;
+        .fa-angle-down{
+            font-size: 12px ;
+            margin-inline-start: 3px ;
+            margin-inline-end: 0 ;
+            color: #5e5e5e;
+            transition: color linear .2s;
+        }
+    }
+    position: relative;
+    &:hover{
+        .account-details{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) translateX(-50%);
+        }
+    }
+}
+
+
+
+// end style of account div when user is logged in 
+
+
+
 
 header{
     transition: all linear .3s;
@@ -107,7 +145,6 @@ body{
 }
     
 .account-details{
-    // border-radius: 10px;
     position: absolute;
     text-align: center;
     background-color: #fff;
@@ -165,10 +202,6 @@ padding: 8px 0;
             transform: translateY(5px);
         }
         transform: translateY(-8px);
-        // .cart-text{
-        //     background-color: #968e86;
-        //     color: #fff;
-        // }
     }
     .cart-icon{
         position: relative;
@@ -221,12 +254,12 @@ padding: 8px 0;
 
 
 
-     .account-btn i  {
-    transition: all linear .2s;
-    }
-    .account-btn-color {
-    color: $main-color;
-    }
+.account-btn i  {
+transition: all linear .2s;
+}
+.account-btn-color {
+color: #f6ede8;
+}
     
     
     
@@ -353,7 +386,7 @@ padding: 8px 0;
   
     &:hover{
         .icon{
-            color: $main-color;
+            color: #f6ede8;
         }
     }
 }
@@ -401,7 +434,6 @@ background-color: #d6cdc8;
 }
 
 .navbar-ul{
-    // position: relative;
     display: flex;
     align-items: center;
     li:last-child{
@@ -496,8 +528,6 @@ background-color: #d6cdc8;
     top: 100%;
     padding: 12px;
     inset-inline-start: 0;
-    // padding-inline-start: 15px;
-    // padding-inline-end: 20px;
     transition: all ease-in-out .3s;
 }
 
@@ -516,7 +546,6 @@ background-color: #d6cdc8;
         font-weight: 400;
         transition: all ease-in-out .2s;
         &:hover{
-             // background-color: #eeeeee;
              background-color: #F1F1F1;
             color: #831518;
         }
@@ -708,7 +737,6 @@ background-color: #d6cdc8;
     transform: translateY(-30px);
     opacity: 0;
     visibility: hidden;
-    // inset-inline-start: -100%;
     padding: 18px 0;
     width: 100% ;
     height: 100% ;
@@ -743,8 +771,6 @@ background-color: #d6cdc8;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    // inset-inline-start: 0;
-    // transition: all linear .3s;
   }
   
   .navbar-div{
@@ -756,9 +782,7 @@ background-color: #d6cdc8;
 
 
  @include max-768 {
-    // .account-text:hover .account-details{
-    //     transform: translateX();
-    // }
+
     .account-details{
         transform: translateY(0);
         transform: translateX(-50%);
